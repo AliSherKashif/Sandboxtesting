@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <property name="acs-oauth-secret-production" type="string">gKUEp9GtHID4i3Fka4JwGrX2LKL1XAjy</property>
+    <property name="acs-oauth-key-production" type="string">ww71E0GWSqQ9FKbUsDraIEmrRIckVfh8</property>
+    <property name="acs-api-key-production" type="string">g1nRSq2TkManFST6zxxvlOSkwgXZB0k5</property>
+    <property name="acs-oauth-secret-development" type="string">nFXqu1s7hCxTrwRVrnhBbHHsrwCPSMZi</property>
+    <property name="acs-oauth-key-development" type="string">OhcHfZbSNxg9r5Wz8rpx5xaQKdTvzxKB</property>
+    <property name="acs-api-key-development" type="string">wlWAcbVcMNN5gZd71vRE6l0iAxGSgLTK</property>
+    <deployment-targets>
+        <target device="mobileweb">false</target>
+        <target device="iphone">false</target>
+        <target device="ipad">false</target>
+        <target device="android">true</target>
+        <target device="blackberry">false</target>
+    </deployment-targets>
+    <sdk-version>2.0.1.GA2</sdk-version>
+    <id>org.box</id>
+    <name>SandBoxApp</name>
+    <version>1.0</version>
+    <publisher>bill gates</publisher>
+    <url>http://</url>
+    <description>not specified</description>
+    <copyright>2012 by bill gates</copyright>
+    <icon>appicon.png</icon>
+    <persistent-wifi>false</persistent-wifi>
+    <prerendered-icon>false</prerendered-icon>
+    <statusbar-style>default</statusbar-style>
+    <statusbar-hidden>false</statusbar-hidden>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+    <guid>c052e3b1-ff8f-439f-9af7-432a4cd2492c</guid>
+    <property name="ti.ui.defaultunit">system</property>
+    <iphone>
+        <orientations device="iphone">
+            <orientation>Ti.UI.PORTRAIT</orientation>
+        </orientations>
+        <orientations device="ipad">
+            <orientation>Ti.UI.PORTRAIT</orientation>
+            <orientation>Ti.UI.UPSIDE_PORTRAIT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_LEFT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_RIGHT</orientation>
+        </orientations>
+    </iphone>
+    <android xmlns:android="http://schemas.android.com/apk/res/android">
+        <application>
+            <service android:name="com.appcelerator.cloud.push.PushService" />
+        </application>
+        <manifest>
+            <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.VIBRATE" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        </manifest>
+    </android>
+    <mobileweb>
+        <precache/>
+        <splash>
+            <enabled>true</enabled>
+            <inline-css-images>true</inline-css-images>
+        </splash>
+        <theme>default</theme>
+    </mobileweb>
+    <modules>
+        <module platform="commonjs" version="2.0.1">ti.cloud</module>
+        <module platform="android" version="2.0.1">ti.cloudpush</module>
+    </modules>
+</ti:app>
